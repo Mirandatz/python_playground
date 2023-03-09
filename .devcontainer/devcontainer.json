@@ -1,0 +1,19 @@
+{
+    "image": "mirandatz/playground:dev_env",
+    "forwardPorts": [
+        8000 // for debugger
+    ],
+    "runArgs": [
+        "--shm-size=16G",
+        "--runtime=nvidia",
+        "--cap-add=SYS_NICE"
+    ],
+    "postStartCommand": [
+        "git",
+        "config",
+        "--global",
+        "--add",
+        "safe.directory",
+        "${containerWorkspaceFolder}"
+    ]
+}
