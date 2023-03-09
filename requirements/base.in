@@ -1,0 +1,15 @@
+attrs
+ipywidgets
+jupyterlab
+loguru
+matplotlib
+numba
+numpy==1.23
+opencv-python
+openpyxl
+pandas
+pandas
+pyarrow
+pydot
+scikit-learn
+scikit-learn

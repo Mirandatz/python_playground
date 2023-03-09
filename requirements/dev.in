@@ -1,0 +1,5 @@
+-r test.in
+
+black
+flake8
+mypy
