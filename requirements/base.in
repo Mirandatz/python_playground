@@ -1,3 +1,4 @@
+albumentations
 attrs
 ipywidgets
 jupyterlab==3.5
@@ -7,6 +8,7 @@ numpy
 opencv-python
 openpyxl
 pandas
+pillow
 pyarrow
 pydot
 scikit-learn

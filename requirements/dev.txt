@@ -26,5 +26,3 @@ pycodestyle==2.10.0
     # via flake8
 pyflakes==3.0.1
     # via flake8
-typing-extensions==4.5.0
-    # via mypy
