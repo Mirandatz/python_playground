@@ -1,5 +1,12 @@
 # dev env
 .venv/
 .vscode/
-playground/
 __pycache__/
+.mypy_cache
+
+# daedalus data
+playground/daedalus/feature_extractor
+playground/daedalus/features_database
+playground/daedalus/post-processed
+playground/daedalus/dataset.zip
+playground/daedalus/marquinho*.jpg
