@@ -10,3 +10,4 @@ pandas
 pyarrow
 pydot
 scikit-learn
+scikit-image
