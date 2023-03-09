@@ -35,6 +35,7 @@ USER $UNAME
 
 # install pyenv and compile python
 FROM with_user as with_python
+ARG PYTHON_VERSION
 ENV PYENV_ROOT /home/$UNAME/.pyenv
 ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 SHELL ["/bin/bash", "-c"]
@@ -42,8 +43,8 @@ RUN curl https://pyenv.run | bash
 RUN pyenv update \
     && PYTHON_CFLAGS="-march=native" \
     CONFIGURE_OPTS="--enable-optimizations --with-lto" \
-    pyenv install 3.10.10 \
-    && pyenv global 3.10.10
+    pyenv install $PYTHON_VERSION \
+    && pyenv global $PYTHON_VERSION
 
 # install tensorflow before other requirements to optimize layer cache
 FROM with_python as with_tensorflow
