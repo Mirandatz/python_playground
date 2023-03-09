@@ -10,14 +10,7 @@ exceptiongroup==1.1.0
     # via pytest
 iniconfig==2.0.0
     # via pytest
-packaging==23.0
-    # via pytest
 pluggy==1.0.0
     # via pytest
-pytest==7.2.1
+pytest==7.2.2
     # via -r requirements/test.in
-tomli==2.0.1
-    # via pytest
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools

@@ -1,15 +1,12 @@
 attrs
 ipywidgets
-jupyterlab
+jupyterlab==3.5
 loguru
 matplotlib
-numba
-numpy==1.23
+numpy
 opencv-python
 openpyxl
 pandas
-pandas
 pyarrow
 pydot
-scikit-learn
 scikit-learn
