@@ -9,7 +9,9 @@ opencv-python
 openpyxl
 pandas
 pillow
+plotly-express
 pyarrow
 pydot
-scikit-learn
 scikit-image
+scikit-learn
+trimesh
