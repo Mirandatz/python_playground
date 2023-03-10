@@ -5,8 +5,8 @@ __pycache__/
 .mypy_cache
 
 # daedalus data
-playground/daedalus/feature_extractor
-playground/daedalus/features_database
-playground/daedalus/post-processed
-playground/daedalus/dataset.zip
-playground/daedalus/marquinho*.jpg
+playground/daedalus/daedalus2/feature_extractor
+playground/daedalus/daedalus2/features_database
+playground/daedalus/daedalus2/post-processed
+playground/daedalus/daedalus2/dataset.zip
+playground/daedalus/daedalus2/marquinho*.jpg
