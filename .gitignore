@@ -4,9 +4,14 @@
 __pycache__/
 .mypy_cache
 
-# daedalus data
+# daedalus2 data
 playground/daedalus/daedalus2/feature_extractor
 playground/daedalus/daedalus2/features_database
 playground/daedalus/daedalus2/post-processed
 playground/daedalus/daedalus2/dataset.zip
 playground/daedalus/daedalus2/marquinho*.jpg
+
+# daedalus1 data
+playground/daedalus/daedalus1/kitti
+playground/daedalus/daedalus1/KITTI-Sequence.zip
+playground/daedalus/daedalus1/ground_truth.npy
