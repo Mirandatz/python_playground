@@ -15,3 +15,5 @@ playground/daedalus/daedalus2/marquinho*.jpg
 playground/daedalus/daedalus1/kitti
 playground/daedalus/daedalus1/KITTI-Sequence.zip
 playground/daedalus/daedalus1/ground_truth.npy
+
+gitignored/
