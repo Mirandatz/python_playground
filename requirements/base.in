@@ -5,6 +5,7 @@ jupyterlab==3.5
 loguru
 matplotlib
 numpy
+open3d 
 opencv-python
 openpyxl
 pandas
@@ -14,4 +15,7 @@ pyarrow
 pydot
 scikit-image
 scikit-learn
+torch 
+torchaudio
+torchvision 
 trimesh

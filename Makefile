@@ -53,7 +53,8 @@ update_requirements:
 		--env HOST_GID=$(GID) \
 		-v $(ROOT_DIR)/requirements:/requirements \
 		python:$(PYTHON_VERSION)-slim-buster \
-			/bin/bash -c 'python -m pip install pip-compile-multi==2.4.5 \
+			/bin/bash -c 'python -m pip install --upgrade pip \
+			&& python -m pip install pip-compile-multi \
 			&& pip-compile-multi \
 			&& chown -R "$${HOST_UID}":"$${HOST_GID}" /requirements'
 

@@ -1,4 +1,5 @@
-FROM nvidia/cuda:11.2.2-cudnn8-devel-ubuntu20.04 AS base
+# FROM nvidia/cuda:11.2.2-cudnn8-devel-ubuntu20.04 AS base
+FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu22.04 AS base
 
 # configure env vars
 ENV TZ=America/Sao_Paulo
@@ -7,7 +8,7 @@ ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
 # install basoc system deps
-FROM base as with_system_deps
+FROM base AS with_system_deps
 RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y \
     curl git graphviz libgl1 unzip \
     && apt-get autoremove -y \
@@ -15,7 +16,7 @@ RUN apt-get update && apt-get install --no-install-recommends --no-install-sugge
     && rm -rf /var/lib/apt/lists/*
 
 # install python deps
-FROM with_system_deps as with_python_deps
+FROM with_system_deps AS with_python_deps
 ARG PYTHON_VERSION
 RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y \
     build-essential gdb lcov pkg-config libbz2-dev libffi-dev libgdbm-dev libgdbm-compat-dev liblzma-dev \
@@ -25,7 +26,7 @@ RUN apt-get update && apt-get install --no-install-recommends --no-install-sugge
     && rm -rf /var/lib/apt/lists/*
 
 # create user
-FROM with_python_deps as with_user
+FROM with_python_deps AS with_user
 ARG UNAME
 ARG UID
 ARG GID
@@ -34,7 +35,7 @@ RUN useradd --create-home --uid $UID --gid $GID --shell /bin/bash $UNAME
 USER $UNAME
 
 # install pyenv and compile python
-FROM with_user as with_python
+FROM with_user AS with_python
 ARG PYTHON_VERSION
 ENV PYENV_ROOT /home/$UNAME/.pyenv
 ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
@@ -47,7 +48,7 @@ RUN pyenv update \
     && pyenv global $PYTHON_VERSION
 
 # install tensorflow before other requirements to optimize layer cache
-FROM with_python as with_tensorflow
+FROM with_python AS with_tensorflow
 RUN pip install --upgrade pip \
     && pip install tensorflow_datasets tensorflow==2.8.* tensorflow_addons
 
