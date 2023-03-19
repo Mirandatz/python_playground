@@ -17,3 +17,7 @@ playground/daedalus/daedalus1/KITTI-Sequence.zip
 playground/daedalus/daedalus1/ground_truth.npy
 
 gitignored/
+
+# torch data
+data/
+checkpoint/

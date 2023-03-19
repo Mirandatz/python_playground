@@ -6,7 +6,7 @@
 #    pip-compile-multi
 #
 -r base.txt
-exceptiongroup==1.1.0
+exceptiongroup==1.1.1
     # via pytest
 iniconfig==2.0.0
     # via pytest

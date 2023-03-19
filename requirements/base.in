@@ -17,5 +17,6 @@ scikit-image
 scikit-learn
 torch 
 torchaudio
+torchmetrics
 torchvision 
 trimesh
