@@ -152,7 +152,7 @@ imageio==2.26.1
     # via scikit-image
 inquirer==3.1.3
     # via lightning
-ipykernel==6.21.3
+ipykernel==6.22.0
     # via
     #   ipywidgets
     #   nbclassic
@@ -202,7 +202,7 @@ jsonschema[format-nongpl]==4.17.3
     #   jupyter-events
     #   jupyterlab-server
     #   nbformat
-jupyter-client==8.0.3
+jupyter-client==8.1.0
     # via
     #   ipykernel
     #   jupyter-server
@@ -250,7 +250,7 @@ lightning-utilities==0.8.0
     # via
     #   lightning
     #   pytorch-lightning
-lit==15.0.7
+lit==16.0.0
     # via triton
 loguru==0.6.0
     # via -r requirements/base.in
