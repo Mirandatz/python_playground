@@ -2,6 +2,7 @@ albumentations
 attrs
 ipywidgets
 jupyterlab==3.5
+lightning
 loguru
 matplotlib
 numpy
