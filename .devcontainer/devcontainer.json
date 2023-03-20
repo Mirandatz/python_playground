@@ -1,5 +1,13 @@
 {
     "image": "mirandatz/playground:dev_env",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python"
+                // "timonwong.shellcheck"
+            ]
+        }
+    },
     "forwardPorts": [
         8000 // for debugger
     ],
